@@ -449,6 +449,7 @@ img{
 
 .sec-title .title{
 	position:relative;
+	top: -130px;
 	font-size:11px;
 	color:#075aa6;
 	font-weight:700;
@@ -460,6 +461,7 @@ img{
 
 .sec-title h2{
 	position:relative;
+	top: -80px;
 	color:#000000;
 	font-weight:700;
 	line-height:1.2em;
@@ -2628,6 +2630,7 @@ img{
 
 .testimonial-section .image-column .image-box img{
 	position:relative;
+	top: -150px;
 	display:block;
 	width:100%;
 }
@@ -2832,8 +2835,8 @@ img{
 }
 
 .sponsors-section .owl-carousel{
-	margin:0px 105px;
-	width:958px;
+	margin: 0px 305px;
+    width: 578px;
 }
 
 .sponsors-section .image-box{
