@@ -1,19 +1,19 @@
 const sendEmail = () => {
-  // document
-  // .getElementById("contact-form")
-  // .addEventListener("submit", function (event) {
-  //   console.log("submitted");
-  //   event.preventDefault();
-  //   // these IDs from the previous steps
-  //   emailjs.sendForm("service_0af8oll", "template_6tbc1pa", this).then(
-  //     () => {
-  //       console.log("SUCCESS!");
-  //     },
-  //     (error) => {
-  //       console.log("FAILED...", error);
-  //     }
-  //   );
-  // });
+  document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    console.log("submitted");
+    event.preventDefault();
+    // these IDs from the previous steps
+    emailjs.sendForm("service_0af8oll", "template_6tbc1pa", this).then(
+      () => {
+        console.log("SUCCESS!");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
+  });
 
   document
     .getElementById("contact-form")
