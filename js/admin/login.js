@@ -1,7 +1,3 @@
-import {
-  addDoc,
-  collection,
-} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { auth } from "../firebase.js";
 import {
   getAuth,
@@ -22,9 +18,10 @@ const adminLogin = async () => {
   try {
     await signInWithEmailAndPassword(auth, email.value, password.value);
     loginForm.reset();
-    window.location.href = "/blog.html";
-    console.log("logged In");
+    window.location.href = "/admin.html";
+    alert("Logged In");
   } catch (err) {
     console.log(err.message);
+    alert("Either username or password is incorrect");
   }
 };
