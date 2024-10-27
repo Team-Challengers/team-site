@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Launch Pad Recruitment Form</title>
+    <title>Contact US</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.css" rel="stylesheet">
      <link href="css/main.css" rel="stylesheet">
@@ -16,21 +16,8 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
 <link href="css/contactForm.css" rel="stylesheet">
 
-<script src="/server/app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-   
-    <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script type="text/javascript">
-    (function () {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init({
-        publicKey: "a0Dannguw0kzPA30D",
-      });
-    })();
-  </script>
+
+  
   </head>
   <body>
     <div class="page-wrapper">
@@ -168,6 +155,7 @@
             required
           />
           <div class="invalid-feedback">Please provide a your email.</div>
+		  <br/>
   
           <label for="contact">Contact Number:</label>
           <input
@@ -191,7 +179,20 @@
           ></textarea>
           <div class="invalid-feedback">Please Write your message</div>
   
-          <input type="submit" value="Submit" />
+          <input type="submit" id="submitBtn" value="Submit" />
+		  <button
+		  class="btn btn-primary"
+		  id="loadButton"
+		  type="button"
+		  disabled
+		  style="width:100%;"
+		>
+		  <span
+			class="spinner-border spinner-border-sm"
+			aria-hidden="true"
+		  ></span>
+		  <span role="status">Loading...</span>
+		</button>
         </form>
       </div>
       <script src="./js/particle.js"></script>
@@ -272,9 +273,15 @@
 	</footer>
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
 
+
+
+
+
+    </div>
+	
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
 <script src="js/appear.js"></script>
@@ -283,11 +290,88 @@
 <script src="js/validate.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/script.js"></script>
-<script src="js/submitcform.js"></script>
+<!-- <script src="./js/particle.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./js/contactForm.js"></script>
+
 
 <!--Google Map APi Key-->
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
 <script src="js/map-script.js"></script>
+<!-- <script src="/server/app.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+   
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "LPW_sMZa5ktCZ3U_9",
+      });
+    })();
+
+	// import * as emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+// (function () {
+//   // https://dashboard.emailjs.com/admin/account
+//   emailjs.init({
+//     publicKey: "LPW_sMZa5ktCZ3U_9",
+//   });
+// })();
+
+const loadButton = document.querySelector("#loadButton");
+
+const submitBtn = document.querySelector("#submitBtn");
+
+loadButton.style.display = "none";
+(() => {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+		  form.classList.add("was-validated");
+        } else {
+          submitBtn.style.display = "none";
+          loadButton.style.display = "block";
+          emailjs.sendForm("service_vaeonco", "template_u4fmpnm", form).then(
+            () => {
+              console.log("SUCCESS!");
+              alert("Email Received We will  reach back to you soon");
+			  form.reset();
+			  form.classList.remove("was-validated");
+              submitBtn.style.display = "block";
+              loadButton.style.display = "none";
+            },
+            (error) => {
+              alert("Some error occurred please try again");
+              console.log("FAILED...", error);
+              submitBtn.style.display = "block";
+              loadButton.style.display = "none";
+            }
+          );
+        }
+
+    
+      },
+      false
+    );
+  });
+})();
+
+  </script>
 <!--End Google Map APi-->
 
 

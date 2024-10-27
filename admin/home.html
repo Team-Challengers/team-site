@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Launch Pad Recruitment Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/bootstrap.css" rel="stylesheet">
-     <link href="css/main.css" rel="stylesheet">
-     <link href="css/responsive.css" rel="stylesheet">
-     <!-- <link href="css/contactform1.css" rel="stylesheet"> -->
-
-    <link rel="shortcut icon" href="images/add/challengers.png" type="image/x-icon">
-    <link rel="icon" href="images/add/challengers.png" type="image/x-icon">
-    <link href="css/login.css" rel="stylesheet">
+    <link href="../css/admin/recruitreq.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+     <link href="../css/main.css" rel="stylesheet">
+     <link href="../css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/add/challengers.png" type="image/x-icon">
+    <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
 
-<script src="/server/app.js"></script>
+<!-- <script src="/server/app.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    
   </head>
   <body>
     <div class="page-wrapper">
       <!-- Preloader -->
-      <div class="preloader"></div>
+      <div class="pageLoader"></div>
 
     <header class="main-header header-style-two">
     	
@@ -33,7 +31,7 @@
             	<div class="clearfix">
                 	
                 	<div class="pull-left logo-box">
-                    	<div class="logo"><a href="index.html"><img src="images/add/logo.png" alt="Logo" title="Company Logo"></a></div>
+                    	<div class="logo"><a href="../index.html"><img src="../images/add/logo.png" alt="Logo" title="Company Logo"></a></div>
                     </div>
                    	
                    	<div class="nav-outer clearfix">
@@ -50,25 +48,24 @@
 
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-									<li><a href="index.html">Home</a>
+									<li><a href="../index.html">Home</a>
 									</li>
 									<li class="dropdown"><a href="#">About Us</a>
 										<ul>
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="team.html">Our Team</a></li>
-											<li><a href="alumni.html">Alumnis</a></li>
-											<li><a href="testimonial.html">Testimonial</a></li>
+											<li><a href="../about.html">About Us</a></li>
+											<li><a href="../team.html">Our Team</a></li>
+											<li><a href="../alumni.html">Alumnis</a></li>
+											<li><a href="../testimonial.html">Testimonial</a></li>
 										</ul>
 									</li>
-									<li><a href="achievements.html">Achievements</a></li>
+									<li><a href="../achievements.html">Achievements</a></li>
 									<!--<li><a href="splits.html">Splits</a>-->
 									</li>
 									<!--<li><a href="blog-list.html">Blogs</a>-->
 									</li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="sponsors.html">Sponsors</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-                  <li class="current"><a href="login.html">Admin Login</a></li>
+									<li><a href="../gallery.html">Gallery</a></li>
+									<li><a href="../sponsors.html">Sponsors</a></li>
+									<li class="current"><a href="../contact.html">Contact us</a></li>
 								</ul>
 							</div>
 							
@@ -86,7 +83,7 @@
         	<div class="auto-container clearfix">
             	<!--Logo-->
             	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/add/logo1.png" alt="Logo" title="Company Logo"></a>
+                	<a href="../index.html" class="img-responsive"><img src="../images/add/logo1.png" alt="Logo" title="Company Logo"></a>
                 </div>
                 
                 <!--Right Col-->
@@ -130,74 +127,27 @@
 		
     </header>
 
-
-    <br> <br>
-<section>
-    <!-- 3D Floating Shapes in the Background -->
-    <div class="floating-shape"></div>
-    <div class="floating-shape"></div>
-    <div class="floating-shape"></div>
-
-    <div class="login-container">
-      <h2 class="text-center mb-4">Login</h2>
-      <form id="loginForm" method="post">
-        <!-- Username Field -->
-        <div class="mb-3">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Username"
-            aria-label="Username"
-            required
-            id="email"
-          />
+    <section>
+        <div class="recruit-container">
+        
+    
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search mail">
+                </div>
+                <div class="spinner-border text-primary" id="dataLoader" style="margin-left:50%;"  role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+            </div>
         </div>
+        
+    
+       
+    </section>
 
-        <!-- Password Field -->
-        <div class="mb-3">
-          <input
-            type="password"
-            name="password"
-            class="form-control"
-            placeholder="Password"
-            id="password"
-            required
-          />
-        </div>
-
-        <!-- Login Button -->
-        <div class="d-grid mb-3">
-          <button type="submit" class="btn btn-primary login-btn">Login</button>
-        </div>
-      </form>
-
-      <!-- Or Section -->
-      <div class="text-center mb-3">
-        <span>Or</span>
-      </div>
-
-      <!-- Sign-Up with Google Button -->
-      <div class="d-grid">
-        <button type="button" class="btn btn-outline-secondary">
-          Sign-up with Google
-        </button>
-      </div>
-
-      <!-- Error Message -->
-      <p class="text-danger text-center mt-3">Invalid username or password</p>
-
-      <!-- Range Input Example -->
-      <div class="mt-4">
-        <!-- <label for="customRange3" class="form-label">Example range</label> -->
-        <!-- <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> -->
-      </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/admin/login.js"></script>
-</section>
-
+    <button id="logout">Logout</button>
 
     <footer class="main-footer style-three">
 
@@ -214,7 +164,7 @@
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
 									<div class="logo">
-										<a href="index.html"><img src="images/Add/logo.png" alt="Logo" /></a>
+										<a href="../index.html"><img src="../images/Add/logo.png" alt="Logo" /></a>
 									</div>
 									<div class="text">We are ready to assist you all the time. We are glad to let you know about us.</div>
 									<ul class="list-style-one">
@@ -229,12 +179,12 @@
                                 <div class="footer-widget links-widget">
 									<h4>Links</h4>
 									<ul class="list-link">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="achievements.html">Achievements</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="testimonial.html">Testimonials</a></li>
-										<li><a href="splits.html">Projects</a></li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="../achievements.html">Achievements</a></li>
+										<li><a href="../about.html">About us</a></li>
+										<li><a href="../testimonial.html">Testimonials</a></li>
+										<li><a href="../splits.html">Projects</a></li>
+										<li><a href="../contact.html">Contact</a></li>
 									</ul>
 								</div>
 							</div>
@@ -252,7 +202,7 @@
 						
 						<!-- Copyright Column -->
 						<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
-							<div class="copyright">Copyright ©2022 <a href="index.html">Team Challengers.</a> All rights reserved.</div>
+							<div class="copyright">Copyright ©2022 <a href="../index.html">Team Challengers.</a> All rights reserved.</div>
 						</div>
 						
 						<!-- Social Column -->
@@ -269,29 +219,28 @@
 			</div>
 		</div>
 	</footer>
+  <button id="logout">Logout</button> 
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+    </div>
 
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/validate.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/script.js"></script>
-<script src="js/submitcform.js"></script>
+ <script src="../js/jquery.js"></script>
+<!-- <script src="../js/popper.min.js"></script> -->
+<!-- <script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/jquery.fancybox.js"></script> -->
+<!-- <script src="../js/appear.js"></script>
+<script src="../js/owl.js"></script>
+<script src="../js/wow.js"></script> -->
+<!-- <script src="../js/validate.js"></script> -->
+<!-- <script src="../js/jquery-ui.js"></script>  -->
+<script src="../js/script.js"></script>
+<!-- <script src="..js/submitcform.js"></script> -->
+<!-- <script src="..js/recruitreq.js"></script> -->
 
 <!--Google Map APi Key-->
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
-<script src="js/map-script.js"></script>
+<script src="../js/map-script.js"></script>
 <!--End Google Map APi-->
-
-
-
-
-    </div>
-  </body>
+    <script type="module" src="../js/admin/home.js"></script>
+  </body>
 </html>
