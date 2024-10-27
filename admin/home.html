@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Launch Pad Recruitment Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/admin/recruitreq.css" rel="stylesheet">
+    <link href="../css/admin/home.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
      <link href="../css/main.css" rel="stylesheet">
      <link href="../css/responsive.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/add/challengers.png" type="image/x-icon">
     <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
+    <!-- <link rel="stylesheet" href="../css/admin/pageLoader.css"/> -->
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
 
@@ -65,7 +65,8 @@
 									</li>
 									<li><a href="../gallery.html">Gallery</a></li>
 									<li><a href="../sponsors.html">Sponsors</a></li>
-									<li class="current"><a href="../contact.html">Contact us</a></li>
+									<li><a href="../contact.html">Contact us</a></li>
+                                    <li class="current"><a href="../login.html">Admin</a></li>
 								</ul>
 							</div>
 							
@@ -115,7 +116,8 @@
 								</li>
 								<li><a href="gallery.html">Gallery</a></li>
 								<li><a href="sponsors.html">Sponsors</a></li>
-								<li class="current"><a href="contact.html">Contact us</a></li>
+								<li><a href="../contact.html">Contact us</a></li>
+                                <li class="current"><a href="../login.html">Admin Login</a></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -128,20 +130,18 @@
     </header>
 
     <section>
-        <div class="recruit-container">
-        
-    
-            <!-- Main Content -->
-            <div class="main-content">
-                <!-- Search Bar -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Search mail">
-                </div>
-                <div class="spinner-border text-primary" id="dataLoader" style="margin-left:50%;"  role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-            </div>
+        <div class="container">
+            <a href="/admin/events.html" class="btn-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 3h-2V1h-2v2H7V1H5v2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H3V8h16v13zm-8-7h4v2h-4zm-6-4h10v2H5z"/></svg>
+                <span>Add Events</span>
+            </a>
+            <a href="/admin/recruits.html" class="btn-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.33 0-10 1.67-10 5v2h20v-2c0-3.33-6.67-5-10-5zm4-8h2v2h-2zm0 4h2v2h-2z"/></svg>
+                <span>View Recruits</span>
+            </a>
         </div>
+    
+    </section>
         
     
        
@@ -223,24 +223,25 @@
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
     </div>
 
+ 
  <script src="../js/jquery.js"></script>
-<!-- <script src="../js/popper.min.js"></script> -->
-<!-- <script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../js/jquery.fancybox.js"></script> -->
-<!-- <script src="../js/appear.js"></script>
-<script src="../js/owl.js"></script>
-<script src="../js/wow.js"></script> -->
-<!-- <script src="../js/validate.js"></script> -->
-<!-- <script src="../js/jquery-ui.js"></script>  -->
-<script src="../js/script.js"></script>
-<!-- <script src="..js/submitcform.js"></script> -->
-<!-- <script src="..js/recruitreq.js"></script> -->
-
-<!--Google Map APi Key-->
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
-<script src="../js/map-script.js"></script>
-<!--End Google Map APi-->
-    <script type="module" src="../js/admin/home.js"></script>
+ <script src="../js/popper.min.js"></script>
+ <script src="../js/bootstrap.min.js"></script>
+ <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="../js/jquery.fancybox.js"></script>
+ <script src="../js/appear.js"></script>
+ <script src="../js/owl.js"></script>
+ <script src="../js/wow.js"></script>
+ <script src="../js/validate.js"></script>
+ <script src="../js/jquery-ui.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/submitcform.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/admin/login.js"></script>
+ 
+ <!--Google Map APi Key-->
+ <script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+ <script src="../js/map-script.js"></script>
   </body>
 </html>
