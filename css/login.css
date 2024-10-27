@@ -1,0 +1,118 @@
+
+      .form-container {
+        max-width: 600px;
+        width: 100%;
+        margin: 30px;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 20px rgba(217, 201, 201, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        
+      }
+
+      /* Form container hover effect */
+     
+
+      /* Button hover effect */
+      .btn-primary {
+        background-color: #0066cc;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #569de3;
+        transform: scale(1.05);
+      }
+
+      /* Smooth hover for form fields */
+      .form-control, .form-select {
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+
+      .form-control:focus, .form-select:focus {
+        box-shadow: 0 0 10px rgba(0, 153, 255, 0.2);
+        border-color: #0099ff;
+      }
+
+      section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: linear-gradient(135deg, #4214e9, #0a0428);
+   
+}
+
+      /* Form label color and font weight */
+      .form-label {
+        font-weight: bold;
+        color: #333333;
+      }
+
+      /* Loading button styling */
+      #loadButton {
+        background-color: #cccccc;
+        border: none;
+      }
+
+      .login-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        z-index: 10;
+        margin: 30px;
+      }
+
+      .login-btn {
+        transition: transform 0.3s ease;
+      }
+
+      .login-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      /* 3D Floating Shapes */
+      .floating-shape {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-shape:nth-child(1) {
+        top: 10%;
+        left: 15%;
+        animation-delay: 0s;
+      }
+
+      .floating-shape:nth-child(2) {
+        top: 60%;
+        right: 10%;
+        animation-delay: 3s;
+      }
+
+      .floating-shape:nth-child(3) {
+        bottom: 15%;
+        left: 60%;
+        animation-delay: 1.5s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(-20px) translateX(20px);
+        }
+      }
