@@ -11,6 +11,7 @@
      <link href="../css/responsive.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/add/challengers.png" type="image/x-icon">
     <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
 
@@ -20,7 +21,7 @@
   <body>
     <div class="page-wrapper">
       <!-- Preloader -->
-      <div class="preloader"></div>
+      <div class="pageLoader"></div>
 
     <header class="main-header header-style-two">
     	
@@ -136,6 +137,9 @@
                 <div class="search-bar">
                     <input type="text" placeholder="Search mail">
                 </div>
+                <div class="spinner-border text-primary" id="dataLoader" style="margin-left:50%;"  role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
             </div>
         </div>
         
@@ -143,6 +147,7 @@
        
     </section>
 
+    <button id="logout">Logout</button>
 
     <footer class="main-footer style-three">
 
@@ -218,16 +223,16 @@
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
     </div>
 
-    <script src="../js/jquery.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+ <script src="../js/jquery.js"></script>
+<!-- <script src="../js/popper.min.js"></script> -->
+<!-- <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="../js/jquery.fancybox.js"></script>
-<script src="../js/appear.js"></script>
+<script src="../js/jquery.fancybox.js"></script> -->
+<!-- <script src="../js/appear.js"></script>
 <script src="../js/owl.js"></script>
-<script src="../js/wow.js"></script>
-<script src="../js/validate.js"></script>
-<script src="../js/jquery-ui.js"></script>
+<script src="../js/wow.js"></script> -->
+<!-- <script src="../js/validate.js"></script> -->
+<!-- <script src="../js/jquery-ui.js"></script>  -->
 <script src="../js/script.js"></script>
 <!-- <script src="..js/submitcform.js"></script> -->
 <!-- <script src="..js/recruitreq.js"></script> -->

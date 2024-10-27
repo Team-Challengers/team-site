@@ -40,16 +40,25 @@ section {
 }
 
 .form-container {
-         position: absolute;
+         /* position: absolute;
          z-index: 1;
          background-color: white;
          padding: 20px;
          border-radius: 8px;
+         
          box-shadow: 0 4px 8px rgba(3, 24, 60, 0.637);
          max-width: 100%;
-         margin: 10px;
+         margin: 40px;
          width: 700px;
-         align-items: center;
+         align-items: center; */
+         max-width: 600px;
+         width: 100%;
+         margin: 30px;
+         background-color: #ffffff;
+         padding: 2rem;
+         border-radius: 1.5rem;
+         box-shadow: 0 8px 20px rgba(217, 201, 201, 0.2);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
        }
        .form-container h2 {
          text-align: center;

@@ -1186,3 +1186,30 @@
 	}
 	
 }
+
+
+.grouptext{
+	text-align: center;
+	color: #000000;
+}
+
+.divbtn{
+	text-align: center;
+}
+
+
+.groupbtn{
+	position:relative;
+	line-height:24px;
+	color:rgb(0,255,0);
+	font-size:15px;
+	cursor: pointer;
+	font-weight:600;
+	border-radius:50px;
+	background-color:rgb(red, rgb(0, 16, 243), blue);
+	text-transform:capitalize;
+	padding:20px 35px 20px 35px;
+	font-family: 'Poppins', sans-serif;
+	box-shadow:0px 0px 20px rgba(1, 255, 18, 0.332);
+	box
+}

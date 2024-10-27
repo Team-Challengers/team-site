@@ -6,9 +6,13 @@ import {
   query,
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-const loader = document.querySelector(".preloader");
+const loader = document.querySelector(".pageLoader");
 
 const table = document.querySelector(".main-content");
+
+const dataLoader = document.querySelector("#dataLoader");
+
+dataLoader.style.display = "block";
 
 function toggleDropdown(element) {
   const details = element.childNodes[1];
@@ -93,30 +97,18 @@ const createDropDown = (data) => {
   table.appendChild(outerDiv);
 };
 
-{
-  /* <ul class="recruitreq-details">
-              <li><span>Name :</span><span class="name">name</span></li>
-              <li>USN/Admission No. :<span class="usn">usn</span> </li>
-              <li>Contact No.<span class="contact">contact</span> </li>
-              <li>Email :<span class="email">email</span> </li>
-              <li>Branch :<span class="branch">branch</span> </li>
-              <li>Year :<span class="year">year</span> </li>
-              <li>Section :<span class="section">section</span> </li>
-              <li>Interested Domain :<span class="intdomain">intdomain</span> </li>
-          </ul> */
-}
-
 const isLoggedIn = async () => {
   auth.onAuthStateChanged(async (user) => {
     if (user) {
+      loader.style.display = "none";
       const resp = await getFreshersDetails();
-      console.log(resp);
       if (resp === false) {
         const h1 = document.createElement("h1");
         h1.textContent = "No One registerd  Yet";
         table.appendChild(h1);
+        dataLoader.style.display = "none";
       }
-      loader.style.display = "none";
+      dataLoader.style.display = "none";
     } else {
       window.location.href = "/";
     }
@@ -130,7 +122,6 @@ const getFreshersDetails = async () => {
     querySnapShot.forEach((doc) => {
       const data = doc.data();
       createDropDown(data);
-      // console.log(data);
     });
   } else if (querySnapShot.size == 0) {
     return false;
@@ -138,7 +129,7 @@ const getFreshersDetails = async () => {
 };
 
 const logout = async () => {
-  auth
+  await auth
     .signOut()
     .then(() => {
       console.log("User  signed out");
