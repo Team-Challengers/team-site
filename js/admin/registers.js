@@ -128,22 +128,22 @@ const getFreshersDetails = async () => {
   }
 };
 
-const logout = async () => {
-  await auth
-    .signOut()
-    .then(() => {
-      console.log("User  signed out");
-      window.location.href = "/";
-    })
-    .catch((error) => {
-      console.error("Error signing out:", error);
-    });
-};
+// const logout = async () => {
+//   await auth
+//     .signOut()
+//     .then(() => {
+//       console.log("User  signed out");
+//       window.location.href = "/";
+//     })
+//     .catch((error) => {
+//       console.error("Error signing out:", error);
+//     });
+// };
 
-const logOut = document.querySelector("#logout");
+// const logOut = document.querySelector("#logout");
 
-logOut.addEventListener("click", () => {
-  logout();
-});
+// logOut.addEventListener("click", () => {
+//   logout();
+// });
 
 window.onload = isLoggedIn();
