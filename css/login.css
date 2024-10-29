@@ -67,9 +67,7 @@
         max-width: 400px;
         position: relative;
         z-index: 10;
-        margin: 30px;
-        margin-top: 90px;
-        margin-bottom: 90px;
+        margin: 100px;
       }
 
       .login-btn {
