@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="../images/add/challengers.png" type="image/x-icon">
     <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
+	<link href="../css/admin/home.css" rel="stylesheet">
+
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
 
@@ -66,7 +68,7 @@
 									<li><a href="../gallery.html">Gallery</a></li>
 									<li><a href="../sponsors.html">Sponsors</a></li>
 									<li><a href="../contact.html">Contact us</a></li>
-                                    <li class="current"><a href="../login.html">Admin</a></li>
+                                    <li class="current"><a href="../admin/login.html">Admin</a></li>
 								</ul>
 							</div>
 							
@@ -117,7 +119,7 @@
 								<li><a href="gallery.html">Gallery</a></li>
 								<li><a href="sponsors.html">Sponsors</a></li>
 								<li><a href="../contact.html">Contact us</a></li>
-                                <li class="current"><a href="../login.html">Admin</a></li>
+                                <li class="current"><a href="../admin/login.html">Admin</a></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -128,6 +130,24 @@
         <!--End Sticky Header-->
 		
     </header>
+
+	<header class="main-header header-style-two">
+		<!-- Existing navbar structure -->
+	
+		<!-- Profile Container for Profile Icon and Dropdown Menu -->
+		<div class="profile-container">
+			<div class="profile-icon" onclick="toggleDropdown()">
+				<img src="/images/icons/proficon.png" alt="Profile Icon">
+			</div>
+			<div id="dropdown-content" class="dropdown-content">
+				<ul>
+				    <li><a href="#">Add Events</a></li>
+					<li><a href="/admin/recruits.html">View recruits</a></li>
+					<li><a id="logout">Logout</a></li>
+				    </ul>
+			</div>
+		</div>
+	</header>
 
     <section>
         <div class="recruit-container">
@@ -149,7 +169,7 @@
        
     </section>
 
-    <button id="logout">Logout</button>
+    
 
     <footer class="main-footer style-three">
 
@@ -224,7 +244,12 @@
   <button id="logout">Logout</button> 
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
     </div>
-
+	<script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown-content");
+            dropdown.classList.toggle("show");
+        }
+    </script>
  <script src="../js/jquery.js"></script>
 <!-- <script src="../js/popper.min.js"></script> -->
 <!-- <script src="../js/bootstrap.min.js"></script>

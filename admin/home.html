@@ -66,7 +66,7 @@
 									<li><a href="../gallery.html">Gallery</a></li>
 									<li><a href="../sponsors.html">Sponsors</a></li>
 									<li><a href="../contact.html">Contact us</a></li>
-                                    <li class="current"><a href="../login.html">Admin</a></li>
+                                    <li class="current"><a href="../admin/login.html">Admin</a></li>
 								</ul>
 							</div>
 							
@@ -117,7 +117,7 @@
 								<li><a href="gallery.html">Gallery</a></li>
 								<li><a href="sponsors.html">Sponsors</a></li>
 								<li><a href="../contact.html">Contact us</a></li>
-                                <li class="current"><a href="../login.html">Admin Login</a></li>
+                                <li class="current"><a href="../admin/login.html">Admin </a></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->
@@ -129,7 +129,26 @@
 		
     </header>
 
-    <section>
+	
+
+	<header class="main-header header-style-two">
+		<!-- Existing navbar structure -->
+	
+		<!-- Profile Container for Profile Icon and Dropdown Menu -->
+		<div class="profile-container">
+			<div class="profile-icon" onclick="toggleDropdown()">
+				<img src="/images/icons/proficon.png" alt="Profile Icon">
+			</div>
+			<div id="dropdown-content" class="dropdown-content">
+				<ul>
+				    <li><a href="#">Add Events</a></li>
+					<li><a href="/admin/recruits.html">View recruits</a></li>
+					<li><a id="logout">Logout</a></li>
+				    </ul>
+			</div>
+		</div>
+	</header>
+	<section>
         <div class="container">
             <a href="/admin/events.html" class="btn-box">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M19 3h-2V1h-2v2H7V1H5v2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H3V8h16v13zm-8-7h4v2h-4zm-6-4h10v2H5z"/></svg>
@@ -142,13 +161,6 @@
         </div>
     
     </section>
-        
-    
-       
-    </section>
-
-    <button id="logout">Logout</button>
-
     <footer class="main-footer style-three">
 
     	<div class="auto-container">
@@ -222,7 +234,12 @@
   <button id="logout">Logout</button> 
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
     </div>
-
+	<script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown-content");
+            dropdown.classList.toggle("show");
+        }
+    </script>
  
  <script src="../js/jquery.js"></script>
  <script src="../js/popper.min.js"></script>
@@ -243,5 +260,5 @@
  <!--Google Map APi Key-->
  <script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
  <script src="../js/map-script.js"></script>
-  </body>
+ </body>
 </html>
