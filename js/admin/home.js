@@ -1,7 +1,6 @@
 import { auth } from "../firebase.js";
 
 const pageLoader = document.querySelector(".pageLoader");
-console.log(pageLoader);
 
 pageLoader.style.display = "block";
 

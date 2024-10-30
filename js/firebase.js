@@ -4,7 +4,7 @@ import {
   getFirestore, // Correct import for Firestore
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,7 +25,8 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase
 
 // Initialize Firebase
 console.log(window.FIREBASE_CONFIG);
-const app = initializeApp(window.FIREBASE_CONFIG);
+const app = initializeApp(firebaseConfig);
+// const app = initializeApp(window.FIREBASE_CONFIG);
 // const analytics = getAnalytics(app);
 
 export const db = getFirestore(app);
