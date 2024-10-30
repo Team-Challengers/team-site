@@ -99,7 +99,7 @@ const createDropDown = (data) => {
 
 const isLoggedIn = async () => {
   auth.onAuthStateChanged(async (user) => {
-    if (!user || user) {
+    if (user) {
       loader.style.display = "none";
       const resp = await getFreshersDetails();
       if (resp === false) {
