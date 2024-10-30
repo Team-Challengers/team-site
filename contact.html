@@ -300,6 +300,7 @@
 <script src="js/map-script.js"></script>
 <!-- <script src="/server/app.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="./public/config.js"></script>
    
     <script
     type="text/javascript"
@@ -310,17 +311,9 @@
     (function () {
       // https://dashboard.emailjs.com/admin/account
       emailjs.init({
-        publicKey: "LPW_sMZa5ktCZ3U_9",
+        publicKey: window.EMAILJS_CONFIG.publicKey
       });
     })();
-
-	// import * as emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
-// (function () {
-//   // https://dashboard.emailjs.com/admin/account
-//   emailjs.init({
-//     publicKey: "LPW_sMZa5ktCZ3U_9",
-//   });
-// })();
 
 const loadButton = document.querySelector("#loadButton");
 
@@ -346,7 +339,7 @@ loadButton.style.display = "none";
         } else {
           submitBtn.style.display = "none";
           loadButton.style.display = "block";
-          emailjs.sendForm("service_vaeonco", "template_u4fmpnm", form).then(
+          emailjs.sendForm(window.EMAILJS_CONFIG.service, window.EMAILJS_CONFIG.template, form).then(
             () => {
               console.log("SUCCESS!");
               alert("Email Received We will  reach back to you soon");

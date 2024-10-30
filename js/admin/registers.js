@@ -80,7 +80,7 @@ const createDropDown = (data) => {
   yearLi.innerHTML = `Year : <span  class="year">${data.year}</span>`;
   ul.appendChild(yearLi);
 
-  branchLi.innerHTML = `Contact No. : <span  class="branch">${data.branch}</span>`;
+  branchLi.innerHTML = `Branch : <span  class="branch">${data.branch}</span>`;
   ul.appendChild(branchLi);
 
   sectionLi.innerHTML = `Section : <span  class="section">${data.section}</span>`;
