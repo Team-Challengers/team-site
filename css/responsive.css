@@ -1213,3 +1213,32 @@
 	box-shadow:0px 0px 20px rgba(1, 255, 18, 0.332);
 	box
 }
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851; /* Darker green on hover */
+}
+/* .whtsp-grp-btn{
+	background-color:#f4f4f4;
+	align-items: end;
+} */
+
+
+.whtsp-grp-btn {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    padding: 10px; /* Optional padding for better spacing */
+}
