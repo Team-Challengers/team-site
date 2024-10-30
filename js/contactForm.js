@@ -2,7 +2,7 @@
 // // (function () {
 // //   // https://dashboard.emailjs.com/admin/account
 // //   emailjs.init({
-// //     publicKey: "LPW_sMZa5ktCZ3U_9",
+// //     publicKey: "",
 // //   });
 // // })();
 
@@ -29,7 +29,7 @@
 //         } else {
 //           submitBtn.style.display = "none";
 //           loadButton.style.display = "block";
-//           emailjs.sendForm("service_vaeonco", "template_u4fmpnm", form).then(
+//           emailjs.sendForm("", "", form).then(
 //             () => {
 //               console.log("SUCCESS!");
 //               // alert("Email Received We will  reach back to you soon");

@@ -60,6 +60,7 @@ loaderBtn.style.display = "none";
           section: section.value,
           interestField: interestField.value,
           year: year.value,
+          selected: false,
           // launchPadMember,
         };
 
