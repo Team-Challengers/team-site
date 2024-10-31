@@ -9,8 +9,6 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-console.log(window.FIREBASE_CONFIG);
-
 const app = initializeApp(window.FIREBASE_CONFIG);
 
 export const db = getFirestore(app);
