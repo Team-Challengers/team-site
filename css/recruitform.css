@@ -1,0 +1,58 @@
+ .form-container {
+        max-width: 600px;
+        width: 100%;
+        margin: 30px;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 20px rgba(217, 201, 201, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+      }
+
+      /* Form container hover effect */
+     
+
+      /* Button hover effect */
+      .btn-primary {
+        background-color: #0066cc;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #569de3;
+        transform: scale(1.05);
+      }
+
+      /* Smooth hover for form fields */
+      .form-control, .form-select {
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+
+      .form-control:focus, .form-select:focus {
+        box-shadow: 0 0 10px rgba(0, 153, 255, 0.2);
+        border-color: #0099ff;
+      }
+
+      section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #e9ecef;
+    margin: 10px;
+}
+
+      /* Form label color and font weight */
+      .form-label {
+        font-weight: bold;
+        color: #333333;
+      }
+
+      /* Loading button styling */
+      #loadButton {
+        background-color: #cccccc;
+        border: none;
+      }
+    

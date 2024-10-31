@@ -1186,3 +1186,145 @@
 	}
 	
 }
+
+
+.grouptext{
+	text-align: center;
+	color: #000000;
+}
+
+.divbtn{
+	text-align: center;
+}
+
+
+.groupbtn{
+	position:relative;
+	line-height:24px;
+	color:rgb(0,255,0);
+	font-size:15px;
+	cursor: pointer;
+	font-weight:600;
+	border-radius:50px;
+	background-color:rgb(red, rgb(0, 16, 243), blue);
+	text-transform:capitalize;
+	padding:20px 35px 20px 35px;
+	font-family: 'Poppins', sans-serif;
+	box-shadow:0px 0px 20px rgba(1, 255, 18, 0.332);
+	box
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851; /* Darker green on hover */
+}
+/* .whtsp-grp-btn{
+	background-color:#f4f4f4;
+	align-items: end;
+} */
+
+
+.whtsp-grp-btn {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    padding: 10px; /* Optional padding for better spacing */
+}
+
+
+.theme-btn.btn-style-one1 {
+	display: inline-block;
+	background: linear-gradient(135deg, #28a745, #218838); /* Green gradient */
+	color: #fff;
+	padding: 12px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 25px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+.theme-btn.btn-style-one1:hover {
+	background: linear-gradient(135deg, #218838, #1e7e34); /* Darker green for hover */
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.call-to-action-section1 {
+	background-color: #007bff; /* Base color */
+	color: #fff;
+	padding: 20px 20px; /* Reduced height */
+	text-align: center;
+	border-radius: 35px;
+	box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Stronger shadow */
+	transition: all 0.3s ease;
+	max-width: 90%; /* Default width for smaller screens */
+	margin: 0 auto;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	animation: pulse 1.5s infinite; /* Animation for pulsing effect */
+	padding: 30px
+}
+
+.call-to-action-section1:hover {
+	background-color: #0056b3; /* Darker shade on hover */
+	box-shadow: 0 0 20px rgba(0, 123, 255, 0.8), 0 0 25px rgba(0, 123, 255, 0.6); /* Enhanced shadow on hover */
+
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+	}
+	50% {
+		box-shadow: 0 0 25px rgba(0, 123, 255, 0.8);
+	}
+	100% {
+		box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+	}
+}
+
+/* Title and Heading Styling */
+.call-to-action-section1 .sec-title1 .title1 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.call-to-action-section1 .sec-title1 h2 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.call-to-action-section1 .sec-title1 h2 span {
+	color: #ffdd57;
+}
+
+/* Adjustments for larger screens (laptop and desktop) */
+@media (min-width: 1024px) {
+	.call-to-action-section1 {
+		max-width: 75%; /* Wider on larger screens */
+		padding: 15px 40px; /* Reduced height and increased width padding */
+		box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* More pronounced shadow on larger screens */
+	}
+
+	.call-to-action-section1 .sec-title1 h2 {
+		font-size: 28px; /* Slightly larger text on larger screens */
+	}
+}
