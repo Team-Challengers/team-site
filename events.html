@@ -1,257 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Testimonials | Team Challengers</title>
-<!-- Stylesheets -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/add/challengers.png" type="image/x-icon">
-<link rel="icon" href="images/add/challengers.png" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-</head>
-
-<body>
-
-<div class="page-wrapper">
- 	
-    <!-- Preloader -->
-    <div class="preloader"></div>
- 	
-    <!-- Main Header / Header Style Two-->
-    <header class="main-header header-style-two">
-    	
-    	<!--Header-Upper-->
-        <div class="header-upper">
-        	<div class="auto-container">
-            	<div class="clearfix">
-                	
-                	<div class="pull-left logo-box">
-                    	<div class="logo"><a href="index.html"><img src="images/add/logo.png" alt="" title=""></a></div>
-                    </div>
-                   	
-                   	<div class="nav-outer clearfix">
-                    
-						<!-- Main Menu -->
-						<nav class="main-menu navbar-expand-md">
-							<div class="navbar-header">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-
-							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-								<ul class="navigation clearfix">
-									<li><a href="index.html">Home</a>
-									</li>
-									<li class="current dropdown"><a href="#">About Us</a>
-										<ul>
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="team.html">Our Team</a></li>
-											<li><a href="alumni.html">Alumnis</a></li>
-											<li><a href="testimonial.html">Testimonial</a></li>
-										</ul>
-									</li>
-									<li><a href="achievements.html">Achievements</a></li>
-									<!--<li><a href="splits.html">Splits</a>-->
-									</li>
-									<!--<li><a href="blog-list.html">Blogs</a>-->
-									</li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="sponsors.html">Sponsors</a></li>
-									<li><a href="recruitform.html">Fresher Registration</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-								</ul>
-							</div>
-							
-						</nav>
-					</div>
-                   
-                </div>
-            </div>
-        </div>
-        <!--End Header Upper-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Cards with Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
         
-		<!--Sticky Header-->
-        <div class="sticky-header">
-        	<div class="auto-container clearfix">
-            	<!--Logo-->
-            	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/add/logo1.png" alt="" title=""></a>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-details {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .author-details .name {
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+            <div class="card-content">
+                <span class="tag">Technology</span>
+                <div class="card-title">Why is the Tesla Cybertruck designed the way it is?</div>
+                <p class="card-description">An exploration into the truck's polarising design</p>
+                <div class="card-footer">
+                    <div class="author-image">
+                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                    </div>
+                    <div class="author-details">
+                        <div class="name">July Dec</div>
+                        <div>2h ago</div>
+                    </div>
                 </div>
-                
-                <!--Right Col-->
-                <div class="right-col pull-right">
-                	<!-- Main Menu -->
-                    <nav class="main-menu navbar-expand-md">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        
-                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
-                            <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a>
-								</li>
-								<li class="current dropdown"><a href="#">About Us</a>
-									<ul>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="team.html">Our Team</a></li>
-										<li><a href="alumni.html">Alumnis</a></li>
-										<li><a href="testimonial.html">Testimonial</a></li>
-									</ul>
-								</li>
-								<li><a href="achievements.html">Achievements</a></li>
-								<!--<li><a href="splits.html">Splits</a>-->
-								</li>
-								<!--<li><a href="blog-list.html">Blogs</a>-->
-								</li>
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="sponsors.html">Sponsors</a></li>
-								<li><a href="recruitform.html">Fresher Registration</a></li>
-								<li><a href="contact.html">Contact us</a></li>
-                            </ul>
-                        </div>
-                    </nav><!-- Main Menu End-->
-                </div>
-                
             </div>
         </div>
-        <!--End Sticky Header-->
-		
-    </header>
-    <!--End Main Header -->
-	
-	
-	<!-- Testimonial Page Section -->
-	<section class="testimonial-page-section">
-		<div class="auto-container">
-			<!-- Sec Title -->
-			
-			
-			<div class="row clearfix">
-				
-				<!-- Testimonial Block Two -->
-				<div class="testimonial-block-two col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="circle-box"></div>
-						
-						<div class="image-outer">
-							<div class="image">
-								<img src="" alt="" />
-							</div>
-						</div>
-						<div class="text-extra"><b>Text Description</b></div>
-						<h5>Event 1</h5>
-						<div class="designation">Small Description</div>
-					</div>
-				</div>
 
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+            <div class="card-content">
+                <span class="tag" style="background-color: #ff5733;">Popular</span>
+                <div class="card-title">How to Keep Going When You Don't Know What's Next</div>
+                <p class="card-description">The future can be scary, but there are ways to deal with that fear.</p>
+                <div class="card-footer">
+                    <div class="author-image">
+                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                    </div>
+                    <div class="author-details">
+                        <div class="name">Eyup Ucmaz</div>
+                        <div>Yesterday</div>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+            <div class="card-content">
+                <span class="tag" style="background-color: #e91e63;">Design</span>
+                <div class="card-title">10 Rules of Dashboard Design</div>
+                <p class="card-description">Dashboard Design Guidelines</p>
+                <div class="card-footer">
+                    <div class="author-image">
+                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                    </div>
+                    <div class="author-details">
+                        <div class="name">Carrie Brewer</div>
+                        <div>1w ago</div>
+                    </div>
                 </div>
-				
-				
-	</section>
-	<!-- End Testimonial Page Section -->
-	
-	<!--Main Footer-->
-    <footer class="main-footer style-three">
-    	<div class="auto-container">
-        	<!--Widgets Section-->
-            <div class="widgets-section">
-            	<div class="row clearfix">
-                	
-                    <!--Column-->
-                    <div class="big-column col-lg-12 col-md-12 col-sm-12">
-						<div class="row clearfix">
-						
-                        	<!--Footer Column-->
-                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
-                                <div class="footer-widget logo-widget">
-									<div class="logo">
-										<a href="index.html"><img src="images/add/logo.png" alt="" /></a>
-									</div>
-									<div class="text">We are ready to assist you all the time. We are glad to let you know about us.</div>
-									<ul class="list-style-one">
-										<li><span class="icon fa fa-envelope"></span> challengers@sahyadri.edu.in </li>
-										<li><span class="icon fa fa-home"></span>Sahyadri campus, Adyar <br> 575007 Karnataka</li>
-									</ul>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget links-widget">
-									<h4>Links</h4>
-									<ul class="list-link">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="achievements.html">Achievements</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="testimonial.html">Testimonials</a></li>
-										<li><a href="splits.html">projects</a></li>
-										<li><a href="contact.html">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		<!-- Footer Bottom -->
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<div class="inner-container">
-					<div class="row clearfix">
-						
-						<!-- Copyright Column -->
-						<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
-							<div class="copyright">Copyright &copy;2022 <a href="index.html">Team Challengers.</a> All rights reserved.</div>
-						</div>
-						
-						<!-- Social Column -->
-						<div class="social-column col-lg-6 col-md-6 col-sm-12">
-							<ul>
-								<li class="follow">Follow us: </li>
-								<li><a href="https://www.facebook.com/teamchallengers.sahyadri/"><span class="fa fa-facebook-square"></span></a></li>
-								<li><a href="https://instagram.com/challengers.sahyadri?igshid=1x0o0longz5cr"><span class="fa fa-instagram"></span></a></li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	
-</div>
-<!--End pagewrapper-->
-
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
-
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/script.js"></script>
-
+            </div>
+        </div>
+    </div>
 </body>
 </html>
