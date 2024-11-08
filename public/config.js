@@ -10,7 +10,7 @@ window.FIREBASE_CONFIG = {
 };
 
 window.EMAILJS_CONFIG = {
-  publicKey: "REACT_APP_EMAILJS_PUBLIC_KEY", //"LPW_sMZa5ktCZ3U_9",
-  service: "REACT_APP_EMAILJS_SERVICE_KEY", //"service_vaeonco"
-  template: "REACT_APP_EMAILJS_TEMPLATE_KEY", //"template_u4fmpnm"
+  publicKey: "REACT_APP_EMAILJS_PUBLIC_KEY",
+  service: "REACT_APP_EMAILJS_SERVICE_KEY",
+  template: "REACT_APP_EMAILJS_TEMPLATE_KEY",
 };

@@ -9,6 +9,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -29,6 +30,11 @@ console.log(window.FIREBASE_CONFIG);
 const app = initializeApp(firebaseConfig);
 // const app = initializeApp(window.FIREBASE_CONFIG);
 // const analytics = getAnalytics(app);
+
+console.log(window.FIREBASE_CONFIG);
+
+const app = initializeApp(window.FIREBASE_CONFIG);
+
 
 export const db = getFirestore(app);
 
