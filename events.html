@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Cards with Animation</title>
+    <title>Content Cards with Animation and Buttons</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+		
         * {
             margin: 0;
             padding: 0;
@@ -35,6 +36,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
         .card:hover {
@@ -80,6 +82,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-bottom: 10px;
         }
 
         .author-image {
@@ -104,20 +107,56 @@
             font-weight: 600;
             color: #333;
         }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .button {
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button.edit {
+            background-color: #4CAF50;
+        }
+
+        .button.edit:hover {
+            background-color: #19841e;
+        }
+
+        .button.delete {
+            background-color: #7d0e06;
+        }
+
+        .button.delete:hover {
+            background-color: #e53935;
+        }
     </style>
 </head>
 <body>
     <div class="card-container">
         <!-- Card 1 -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+            <img src="https://images.unsplash.com/photo-1618472733970-e1d281b2b2e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbnRhZ2UlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="Image 1">
             <div class="card-content">
                 <span class="tag">Technology</span>
                 <div class="card-title">Why is the Tesla Cybertruck designed the way it is?</div>
                 <p class="card-description">An exploration into the truck's polarising design</p>
                 <div class="card-footer">
                     <div class="author-image">
-                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                        <img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJ1bXB8ZW58MHx8MHx8fDA%3D" alt="Author Image">
                     </div>
                     <div class="author-details">
                         <div class="name">July Dec</div>
@@ -125,20 +164,22 @@
                     </div>
                 </div>
             </div>
+            <div class="button-container">
+                <button class="button edit">Edit</button>
+                <button class="button delete">Delete</button>
+            </div>
         </div>
-
-		<!-- added by varnita -->
 
         <!-- Card 2 -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+            <img src="https://images.unsplash.com/photo-1618472733970-e1d281b2b2e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbnRhZ2UlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="Image 2">
             <div class="card-content">
                 <span class="tag" style="background-color: #ff5733;">Popular</span>
                 <div class="card-title">How to Keep Going When You Don't Know What's Next</div>
                 <p class="card-description">The future can be scary, but there are ways to deal with that fear.</p>
                 <div class="card-footer">
                     <div class="author-image">
-                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                        <img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJ1bXB8ZW58MHx8MHx8fDA%3D" alt="Author Image">
                     </div>
                     <div class="author-details">
                         <div class="name">Eyup Ucmaz</div>
@@ -146,24 +187,32 @@
                     </div>
                 </div>
             </div>
+            <div class="button-container">
+                <button class="button edit">Edit</button>
+                <button class="button delete">Delete</button>
+            </div>
         </div>
 
         <!-- Card 3 -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1726610930930-0e1af5f2d038?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+            <img src="https://images.unsplash.com/photo-1618472733970-e1d281b2b2e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHZpbnRhZ2UlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="Image 3">
             <div class="card-content">
-                <span class="tag" style="background-color: #e91e63;">Design</span>
+                <span class="tag" style="background-color: #ec7a74;">Design</span>
                 <div class="card-title">10 Rules of Dashboard Design</div>
                 <p class="card-description">Dashboard Design Guidelines</p>
                 <div class="card-footer">
                     <div class="author-image">
-                        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-11/06/full/1730881342-0984.jpg?im=FeatureCrop,size=(826,465)" alt="Author Image">
+                        <img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJ1bXB8ZW58MHx8MHx8fDA%3D" alt="Author Image">
                     </div>
                     <div class="author-details">
                         <div class="name">Carrie Brewer</div>
                         <div>1w ago</div>
                     </div>
                 </div>
+            </div>
+            <div class="button-container">
+                <button class="button edit">Edit</button>
+                <button class="button delete">Delete</button>
             </div>
         </div>
     </div>
