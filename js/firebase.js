@@ -21,8 +21,6 @@ window.FIREBASE_CONFIG = {
   measurementId: "G-31X3C0F33S",
 };
 
-console.log(window.FIREBASE_CONFIG);
-
 // firebaseConfig
 const app = initializeApp(window.FIREBASE_CONFIG);
 

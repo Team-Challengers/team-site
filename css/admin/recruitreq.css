@@ -65,8 +65,8 @@ section {
   max-width: 100%;
   width: 80%;
   margin: auto;
-  background-color: #f0f0f0; /* A lighter grey for a softer look */
-  padding: 2rem; /* Increased padding for more space */
+  background-color: white; /* A lighter grey for a softer look */
+  padding: 20px; /* Increased padding for more space */
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
