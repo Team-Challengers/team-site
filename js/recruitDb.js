@@ -80,6 +80,7 @@ const addToDB = async (data) => {
         alert("Registered Successfully");
       })
       .catch((err) => {
+        console.log(err);
         alert("Some error occured please try again");
       });
     loaderBtn.style.display = "none";
