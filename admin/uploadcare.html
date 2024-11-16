@@ -10,7 +10,7 @@
     />
   </head>
   <body>
-    <uc-config
+    <!-- <uc-config
       ctx-name="my-uploader"
       source-list="local, url, camera, dropbox"
       pubkey="3b3ba1936c8ec13a657a"
@@ -38,13 +38,92 @@
           console.log("Uploader element found!");
 
           // Attach the event listener only if the element is found
-          ctx.addEventListener("file-upload-success", (e) => {
+          ctx.addEventListener("file-url-changed", (e) => {
             console.log("file-upload-success event triggered!");
             console.log("Event Details:", e.detail);
           });
         } else {
           console.error("Uploader element not found.");
         }
+      });
+    </script> -->
+
+    <!-- <uc-config
+      ctx-name="my-uploader"
+      source-list="local, url, camera, dropbox"
+      pubkey="3b3ba1936c8ec13a657a"
+    ></uc-config>
+    <uc-file-uploader-regular
+      ctx-name="my-uploader"
+      class="uc-light"
+    ></uc-file-uploader-regular>
+    <uc-upload-ctx-provider ctx-name="my-uploader"></uc-upload-ctx-provider>
+
+    <script type="module">
+      import * as UC from "https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.js";
+      UC.defineComponents(UC);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const provider = document.querySelector("uc-upload-ctx-provider");
+        provider.addEventListener("file-url-changed", (e) => {
+          console.log("CDN URL:", e.detail.cdnUrl);
+        });
+
+        provider.addEventListener("file-deleted", (e) => {
+          console.log(e.detail);
+          console.log("The uploaded file was deleted.");
+        });
+
+        const deleteButtonSelector = ".uc-light .delete-icon-selector"; // Replace 'delete-icon-selector' with actual class or selector for delete button
+
+        document.addEventListener("click", (event) => {
+          console.log("deleted");
+          console.log(event.detai);
+          const deleteButton = event.target.closest(deleteButtonSelector);
+          if (deleteButton) {
+            console.log("Delete button clicked. Performing custom function...");
+            // Add your custom function here
+          }
+        });
+      });
+    </script> -->
+
+    <uc-config
+      ctx-name="my-uploader"
+      source-list="local, url, camera, dropbox"
+      pubkey="3b3ba1936c8ec13a657a"
+    ></uc-config>
+    <uc-file-uploader-regular
+      ctx-name="my-uploader"
+      class="uc-light"
+    ></uc-file-uploader-regular>
+    <uc-upload-ctx-provider ctx-name="my-uploader"></uc-upload-ctx-provider>
+
+    <script type="module">
+      import * as UC from "https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.js";
+      UC.defineComponents(UC);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const provider = document.querySelector("uc-upload-ctx-provider");
+        let uploadedFileUrl = null;
+
+        // Capture the file URL after uploading
+        provider.addEventListener("file-url-changed", (e) => {
+          uploadedFileUrl = e.detail;
+          console.log("CDN URL stored:", uploadedFileUrl);
+        });
+
+        // Detect when the file is deleted
+        provider.addEventListener("file-deleted", () => {
+          if (uploadedFileUrl) {
+            console.log(
+              "File deleted. CDN URL of deleted file:",
+              uploadedFileUrl
+            );
+            // Perform your custom function with the CDN URL here
+            uploadedFileUrl = null; // Clear the stored URL after deletion
+          }
+        });
       });
     </script>
   </body>
