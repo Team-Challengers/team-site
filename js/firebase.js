@@ -11,6 +11,16 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+window.FIREBASE_CONFIG = {
+  apiKey: "AIzaSyDY1EPvNDxjPFzEikW80OUfiulv5nNb0Uk",
+  authDomain: "challengers-ad326.firebaseapp.com",
+  projectId: "challengers-ad326",
+  storageBucket: "challengers-ad326.firebasestorage.app",
+  messagingSenderId: "142595397371",
+  appId: "1:142595397371:web:e222038cd9dcc5473a825e",
+  measurementId: "G-31X3C0F33S",
+};
+
 // firebaseConfig
 const app = initializeApp(window.FIREBASE_CONFIG);
 
