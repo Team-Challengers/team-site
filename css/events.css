@@ -24,7 +24,7 @@ body {
 
 .card {
   background-color: #fff;
-  width: 50%;
+  width: 80%;
   max-width: 100%; /* Restrict max width for larger screens */
   height: 10%;
   border-radius: 8px;

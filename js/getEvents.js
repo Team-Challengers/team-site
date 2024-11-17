@@ -66,7 +66,7 @@ const createEventCard = (data, loggedInStatus, eventId) => {
   cardContent.appendChild(cardDescription);
 
   const cardFooter = document.createElement("div");
-  cardFooter.innerHTML = `<p>Timings : ${data.from} - ${data.to}</p>`;
+  cardFooter.innerHTML = `<p> Date :  ${data.date} & 20-11-2024 </p><br/><p>Timings : ${data.from} - ${data.to}</p>`;
   cardFooter.classList.add("card-footer");
   cardContent.appendChild(cardFooter);
 
@@ -89,8 +89,8 @@ const createCardBtn = (eventId, buttonContainer, loginStatus, data) => {
     id: eventId,
     type: "button",
     class: "btn btn-primary button register",
-    "data-bs-toggle": "modal",
-    "data-bs-target": "#registrationModal",
+    // "data-bs-toggle": "modal",
+    // "data-bs-target": "#registrationModal",
   };
 
   if (loginStatus) {
@@ -124,7 +124,9 @@ const createCardBtn = (eventId, buttonContainer, loginStatus, data) => {
   registerBtn.innerText = "Register";
 
   registerBtn.addEventListener("click", () => {
-    eventInfoId = registerBtn.getAttribute("id");
+    registerBtn.disabled = "true";
+    window.open("https://forms.gle/SpySXiJkXCRBmY7J6", "_blank");
+    // eventInfoId = registerBtn.getAttribute("id");
   });
 
   buttonContainer.appendChild(registerBtn);
@@ -182,13 +184,13 @@ const deleteFunction = async (eventId, data) => {
 };
 
 const isLoggedIn = async () => {
-  auth.onAuthStateChanged(async (user) => {
-    if (user) {
-      getEventsList(true);
-    } else {
-      getEventsList(false);
-    }
-  });
+  // auth.onAuthStateChanged(async (user) => {
+  //   if (user) {
+  getEventsList(false);
+  // } else {
+  //   getEventsList(false);
+  // }
+  // });
 };
 
 const resgisterEvent = (function () {
