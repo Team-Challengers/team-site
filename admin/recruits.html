@@ -13,6 +13,9 @@
     <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
 	<link href="../css/admin/home.css" rel="stylesheet">
+	<link href="../css/admin/filter.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
 
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
@@ -66,6 +69,7 @@
 									<!--<li><a href="blog-list.html">Blogs</a>-->
 									</li>
 									<li><a href="../gallery.html">Gallery</a></li>
+									<li><a href="../events.html">Events</a></li>
 									<li><a href="../sponsors.html">Sponsors</a></li>
 									<li><a href="../recruitform.html">Fresher Registration</a></li>
 									<li><a href="../contact.html">Contact us</a></li>
@@ -102,23 +106,24 @@
                         
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
                             <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="../index.html">Home</a>
 								</li>
 								<li class="dropdown"><a href="#">About Us</a>
 									<ul>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="team.html">Our Team</a></li>
-										<li><a href="alumni.html">Alumnis</a></li>
-										<li><a href="testimonial.html">Testimonial</a></li>
+										<li><a href="../about.html">About Us</a></li>
+										<li><a href="../team.html">Our Team</a></li>
+										<li><a href="../alumni.html">Alumnis</a></li>
+										<li><a href="../testimonial.html">Testimonial</a></li>
 									</ul>
 								</li>
-								<li><a href="achievements.html">Achievements</a></li>
+								<li><a href="../achievements.html">Achievements</a></li>
 								<!--<li><a href="splits.html">Splits</a>-->
 								</li>
-								<li><a href="blog-list.html">Blog</a>
-								</li>
-								<li><a href="gallery.html">Gallery</a></li>
-								<li><a href="sponsors.html">Sponsors</a></li>
+								<!-- <li><a href="blog-list.html">Blog</a>
+								</li> -->
+								<li><a href="../gallery.html">Gallery</a></li>
+								<li><a href="../events.html">Events</a></li>
+								<li><a href="../sponsors.html">Sponsors</a></li>
 								<li><a href="../recruitform.html">Fresher Registration</a></li>
 								<li><a href="../contact.html">Contact us</a></li>
                                 <li class="current"><a href="../admin/login.html">Admin</a></li>
@@ -153,20 +158,84 @@
 	</header>
 
     <section>
-        <div class="recruit-container">
+
+		<div class="main-content">
+			<!-- Search Bar -->
+			<div class="filter-bar">
+				<button class="filter-button" onclick="toggleDropdown('filterDropdown')">Filter <i class="fas fa-chevron-down"></i></button>
+				<button class="filter-button" onclick="toggleDropdown('domainDropdown')">Domain <i class="fas fa-chevron-down"></i></button>
+				<button class="filter-button" onclick="toggleDropdown('yearDropdown')">Year <i class="fas fa-chevron-down"></i></button>
+			  </div>
+			  
+			  <div id="filterDropdown" class="dropdown-container">
+				<div class="filter-section">
+				  <h5>Domain</h5>
+				  <label><input type="radio" name="domain" value="Coding"> Coding</label>
+				  <label><input type="radio" name="domain" value="Robotics"> Robotics</label>
+				  <label><input type="radio" name="domain" value="Aeromodelling"> Aeromodelling</label>
+				  <span class="clear" onclick="clearSelection('domain')">Clear</span>
+				</div>
+				<div class="filter-section">
+				  <h5>Year</h5>
+				  <label><input type="radio" name="year" value="1st Year"> 1st Year</label>
+				  <label><input type="radio" name="year" value="2nd Year"> 2nd Year</label>
+				  <label><input type="radio" name="year" value="3rd Year"> 3rd Year</label>
+				  <label><input type="radio" name="year" value="4th Year"> 4th Year</label>
+				  <span class="clear" onclick="clearSelection('year')">Clear</span>
+				</div>
+				<label><input type="radio" name="all" value="All">All</label>
+				<div class="filter-buttons">
+			  
+				  <button class="clear-filter" style="background-color: rgb(162, 8, 8);" onclick="clearAllFilters()">Clear Filter</button>
+				  <button class="apply-button" onclick="applyFilters()">Apply Filter</button>
+				</div>
+			  </div>
+			  
+			  <div id="domainDropdown" class="dropdown">
+				<div class="dropdown-header">
+				  <h4>Domain</h4>
+				  <span class="clear" onclick="clearSelection('domain')">Clear</span>
+				</div>
+				<label><input type="radio" name="domain" value="Coding"> Coding</label>
+				<label><input type="radio" name="domain" value="Robotics"> Robotics</label>
+				<label><input type="radio" name="domain" value="Aeromodelling"> Aeromodelling</label>
+				<div class="filter-buttons">
+				  <button class="apply-button" onclick="applyDomainFilter()">Apply Filter</button>
+				</div>
+			  </div>
+			  
+			  <div id="yearDropdown" class="dropdown">
+				<div class="dropdown-header">
+				  <h4>Year</h4>
+				  <span class="clear" onclick="clearSelection('year')">Clear</span>
+				</div>
+				<label><input type="radio" name="year" value="1st Year"> 1st Year</label>
+				<label><input type="radio" name="year" value="2nd Year"> 2nd Year</label>
+				<label><input type="radio" name="year" value="3rd Year"> 3rd Year</label>
+				<label><input type="radio" name="year" value="4th Year"> 4th Year</label>
+				<div class="filter-buttons">
+				  <button class="apply-button" onclick="applyYearFilter()">Apply Filter</button>
+				</div>
+			  </div>
+			  <br>
+        <!-- <div class="recruit-container"> -->
         
     
             <!-- Main Content -->
-            <div class="main-content">
-                <!-- Search Bar -->
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
-                </div>
+            
                 <div class="spinner-border text-primary" id="dataLoader" style="margin-left:50%;"  role="status">
                     <span class="sr-only">Loading...</span>
                   </div>
-            </div>
+
+
+
+				  
+            <!-- </div> -->
+			
         </div>
+		<div class="space"></div>
+				  <div class="space"></div>
+				  <div class="space"></div>
         
     
        
@@ -274,5 +343,6 @@
 <script src="../js/map-script.js"></script>
 <!--End Google Map APi-->
     <script type="module" src="../js/admin/registers.js"></script>
+	<script src="../js/admin/filter.js"></script>
   </body>
 </html>

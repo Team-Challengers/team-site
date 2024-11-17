@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="../css/admin/home.css" rel="stylesheet"> -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+     <link href="../css/main.css" rel="stylesheet">
+     <link href="../css/responsive.css" rel="stylesheet">
+     <link rel="stylesheet" href="../css/admin/pageLoader.css"/>
+     <!-- <link href="css/contactform1.css" rel="stylesheet"> -->
+
+     <link rel="shortcut icon" href="../images/add/challengers.png" type="image/x-icon">
+     <link rel="icon" href="../images/add/challengers.png" type="image/x-icon">
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.css"
+   />
+
+     
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,800i,900&display=swap" rel="stylesheet">
+
+<!-- <script src="/server/app.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+    /* Remove blue background color on dropdown item click */
+    .dropdown-item:focus, .dropdown-item:hover, .dropdown-item:active {
+      background-color: transparent;
+      color: inherit;
+    }
+    /* Additional styling for better spacing */
+    .dropdown-item label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    /* Background styling */
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 100%;
+      width: 100%;
+      margin: auto;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+    
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+      <div class="pageLoader"></div>
+
+    <header class="main-header header-style-two">
+    	
+    	<!--Header-Upper-->
+        <div class="header-upper">
+        	<div class="auto-container">
+            	<div class="clearfix">
+                	
+                	<div class="pull-left logo-box">
+                    	<div class="logo"><a href="../index.html"><img src="../images/add/logo.png" alt="Logo" title="Company Logo"></a></div>
+                    </div>
+                   	
+                   	<div class="nav-outer clearfix">
+                    
+						<!-- Main Menu -->
+						<nav class="main-menu navbar-expand-md">
+							<div class="navbar-header">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+								<ul class="navigation clearfix">
+									<li><a href="../index.html">Home</a>
+									</li>
+									<li class="dropdown"><a href="#">About Us</a>
+										<ul>
+											<li><a href="../about.html">About Us</a></li>
+											<li><a href="../team.html">Our Team</a></li>
+											<li><a href="../alumni.html">Alumnis</a></li>
+											<li><a href="../testimonial.html">Testimonial</a></li>
+										</ul>
+									</li>
+									<li><a href="../achievements.html">Achievements</a></li>
+									<!--<li><a href="splits.html">Splits</a>-->
+									</li>
+									<!--<li><a href="blog-list.html">Blogs</a>-->
+									</li>
+									<li><a href="../gallery.html">Gallery</a></li>
+									<li><a href="../sponsors.html">Sponsors</a></li>
+									<li><a href="../recruitform.html">Fresher Registration</a></li>
+									<li><a href="../contact.html">Contact us</a></li>
+                                    <li class="current"><a href="../admin/login.html">Admin</a></li>
+								</ul>
+							</div>
+							
+						</nav>
+						
+					</div>
+                   
+                </div>
+            </div>
+        </div>
+        <!--End Header Upper-->
+        
+		<!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+            	<!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="../index.html" class="img-responsive"><img src="../images/add/logo1.png" alt="Logo" title="Company Logo"></a>
+                </div>
+                <!-- login profile -->
+                <!--Right Col-->
+                <div class="right-col pull-right">
+                	<!-- Main Menu -->
+                    <nav class="main-menu navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                            <ul class="navigation clearfix">
+                                <li><a href="../index.html">Home</a>
+								</li>
+								<li class="dropdown"><a href="#">About Us</a>
+									<ul>
+										<li><a href="../about.html">About Us</a></li>
+										<li><a href="../team.html">Our Team</a></li>
+										<li><a href="../alumni.html">Alumnis</a></li>
+										<li><a href="../testimonial.html">Testimonial</a></li>
+									</ul>
+								</li>
+								<li><a href="../achievements.html">Achievements</a></li>
+								<!--<li><a href="splits.html">Splits</a>-->
+								</li>
+								<!-- <li><a href="blog-list.html">Blog</a>
+								</li> -->
+								<li><a href="../gallery.html">Gallery</a></li>
+								<li><a href="../sponsors.html">Sponsors</a></li>
+								<li><a href="../recruitform.html">Fresher Registration</a></li>
+								<li><a href="../contact.html">Contact us</a></li>
+                                <li class="current"><a href="../admin/login.html">Admin </a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+                
+            </div>
+        </div>
+        <!--End Sticky Header-->
+		
+    </header>
+
+
+    <br> <br>
+
+    <div class="container">
+        <div class="form-container">
+          <h2><b>Events</b></h2>
+          <form id="eventsForm"  novalidate>
+            
+            <!-- Event Name -->
+            <div class="form-group">
+              <label for="event-name">Event Name</label>
+              <input type="text" id="event-name" name="event_name" class="form-control" required>
+              <div class="invalid-feedback">Please enter the event name.</div>
+            </div>
+    
+            <!-- Event Description -->
+            <div class="form-group">
+              <label for="event-description">Event Description</label>
+              <textarea id="event-description" name="event_description" class="form-control" rows="4" required></textarea>
+              <div class="invalid-feedback">Please enter a description for the event.</div>
+            </div>
+
+             <!-- image preview -->
+              <img src="" id="image-preview" style="width:50px; height: 50px"alt=""/>
+    
+            <!-- File Upload -->
+          
+            <div class="form-group">
+              <label for="image">Event Date</label>
+              <br/>
+              <uc-config
+              id="image"
+              ctx-name="my-uploader"
+              source-list="local, url, camera, dropbox"
+              pubkey="3005a3ece31f85c8ef66"
+            ></uc-config>
+            <uc-file-uploader-regular
+              ctx-name="my-uploader"
+              class="uc-light"
+            ></uc-file-uploader-regular>
+            <uc-upload-ctx-provider ctx-name="my-uploader"></uc-upload-ctx-provider>
+            </div>
+    
+            <!-- Event Date -->
+            <div class="form-group">
+              <label for="event-date">Event Date</label>
+              <input type="date" id="event-date" name="event_date" class="form-control" required>
+              <div class="invalid-feedback">Please select a valid date for the event.</div>
+            </div>
+
+            <!-- Event Time -->
+
+              <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">  <label for="timeDropdown">Select Time:</label>
+                      <select id="timeDropdown1" class="form-control" aria-label="Time Select" required>
+                        <option disabled value="" selected>Select Time</option>
+                          <!-- Options will be generated by JavaScript -->
+                       </select>
+                    </div>
+                    <div class="col-md-6">  <label for="timeDropdown">Select Time:</label>
+                        <select id="timeDropdown2" class="form-control" aria-label="Time Select" required>
+                          <option disabled value="" selected>Select Time</option>
+                           <!-- Options will be generated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+
+                <!--Event Type-->
+
+                <div class="container mt-5">
+                  <label for="dropdownMenuButton">Select Interests:</label>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      Choose Options
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li class="dropdown-item">
+                        <label>
+                          <input type="checkbox" class="domainCheckBox" id="coding" value="Coding">
+                          Coding
+                        </label>
+                      </li>
+                      <li class="dropdown-item">
+                        <label>
+                          <input type="checkbox"  class="domainCheckBox" id="aeromodeling" value="Aeromodeling">
+                          Aeromodeling
+                        </label>
+                      </li>
+                      <li class="dropdown-item">
+                        <label>
+                          <input type="checkbox"  class="domainCheckBox" id="robotics" value="Robotics">
+                          Robotics
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" class="submit-btn  mt-4">Submit</button>
+          
+		      <button
+			      class="submit-btn mt-4"
+			      id="loader"
+			      type="button"
+			      disabled
+		      >
+			      <span
+			        class="spinner-border spinner-border-sm"
+			        aria-hidden="true"
+			      ></span>
+			      <span role="status">Loading...</span>
+		      </button>
+    
+          </form>
+        </div>
+      </div>
+      <br><br>
+
+
+    <footer class="main-footer style-three">
+
+    	<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--Column-->
+                    <div class="big-column col-lg-12 col-md-12 col-sm-12">
+						<div class="row clearfix">
+						
+                        	<!--Footer Column-->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+										<a href="index.html"><img src="../images/Add/logo.png" alt="Logo" /></a>
+									</div>
+									<div class="text">We are ready to assist you all the time. We are glad to let you know about us.</div>
+									<ul class="list-style-one">
+										<li><span class="icon fa fa-envelope"></span> challengers@sahyadri.edu.in </li>
+										<li><span class="icon fa fa-home"></span>Sahyadri campus, Adyar<br>575007 Karnataka</li>
+									</ul>
+								</div>
+							</div>
+							
+							<!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+									<h4>Links</h4>
+									<ul class="list-link">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="achievements.html">Achievements</a></li>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="testimonial.html">Testimonials</a></li>
+										<li><a href="splits.html">Projects</a></li>
+										<li><a href="contact.html">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Bottom -->
+		<div class="footer-bottom">
+			<div class="auto-container">
+				<div class="inner-container">
+					<div class="row clearfix">
+						
+						<!-- Copyright Column -->
+						<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright">Copyright ©2022 <a href="index.html">Team Challengers.</a> All rights reserved.</div>
+						</div>
+						
+						<!-- Social Column -->
+						<div class="social-column col-lg-6 col-md-6 col-sm-12">
+							<ul>
+								<li class="follow">Follow us: </li>
+								<li><a href="https://www.facebook.com/teamchallengers.sahyadri/" target="_blank" rel="noopener"><span class="fa fa-facebook-square" aria-label="Facebook"></span></a></li>
+								<li><a href="https://instagram.com/challengers.sahyadri?igshid=1x0o0longz5cr" target="_blank" rel="noopener"><span class="fa fa-instagram" aria-label="Instagram"></span></a></li>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+  <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+
+  <script type="module" src="../js/admin/addEvent.js"></script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/jquery.fancybox.js"></script>
+<script src="../js/appear.js"></script>
+<script src="../js/owl.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../js/validate.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/submitcform.js"></script>
+
+<script src="../public/config.js"></script>
+
+<!--Google Map APi Key-->
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+<script src="../js/map-script.js"></script>
+<!--End Google Map APi-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Prevent dropdown from closing when clicking inside
+    document.querySelectorAll('.dropdown-menu').forEach(function(dropdown) {
+      dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <script>
+    // JavaScript to populate time dropdown with 12-hour AM/PM format
+    const timeDropdown1 = document.getElementById("timeDropdown1");
+    const timeDropdown2=document.getElementById("timeDropdown2");
+
+    function populateTimeOptions(timeDropdown) {  
+      const periods = ["AM", "PM"];
+      for (let period of periods) {
+        for (let hour = 1; hour <= 12; hour++) {
+          for (let minute = 0; minute < 60; minute += 15) {
+            const hourString = hour.toString().padStart(2, '0');
+            const minuteString = minute.toString().padStart(2, '0');
+            const option = document.createElement("option");
+            option.value = `${hourString}:${minuteString} ${period}`;
+            option.textContent = `${hourString}:${minuteString} ${period}`;
+            timeDropdown.appendChild(option);
+          }
+        }
+      }
+    }
+
+    // Populate the dropdown when the page loads
+    populateTimeOptions(timeDropdown1);
+    populateTimeOptions(timeDropdown2);
+  </script>
+
+  <!-- <script>
+    // JavaScript for Bootstrap validation and date validation
+    (function () {
+      'use strict';
+
+      var form = document.getElementById('eventsForm');
+
+      // Date validation to allow only future dates
+      const eventDateInput = document.getElementById('event-date');
+      const today = new Date().toISOString().split('T')[0];
+      eventDateInput.setAttribute('min', today);
+
+      // Add event listener for form submission
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+
+      // Real-time validation
+      const inputs = form.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+        });
+      });
+    })();
+
+  </script> -->
+
+
+
+
+    </div>
+  </body>
+</html>
