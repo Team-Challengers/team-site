@@ -1263,7 +1263,7 @@
 
 
 .call-to-action-section1 {
-	background-color: #007bff; /* Base color */
+	background-color: #075aa6; /* Base color */
 	color: #fff;
 	padding: 20px 20px; /* Reduced height */
 	text-align: center;
@@ -1281,7 +1281,7 @@
 
 .call-to-action-section1:hover {
 	background-color: #0056b3; /* Darker shade on hover */
-	box-shadow: 0 0 20px rgba(0, 123, 255, 0.8), 0 0 25px rgba(0, 123, 255, 0.6); /* Enhanced shadow on hover */
+	box-shadow: 0 0 20px rgba(1, 62, 129, 0.896), 0 0 25px rgba(0, 123, 255, 0.6); /* Enhanced shadow on hover */
 
 }
 
@@ -1313,7 +1313,7 @@
 }
 
 .call-to-action-section1 .sec-title1 h2 span {
-	color: #ffdd57;
+	color: #ffffff;
 }
 
 /* Adjustments for larger screens (laptop and desktop) */
