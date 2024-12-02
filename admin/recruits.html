@@ -162,32 +162,52 @@
 		<div class="main-content">
 			<!-- Search Bar -->
 			<div class="filter-bar">
-				<button class="filter-button" onclick="toggleDropdown('filterDropdown')">Filter <i class="fas fa-chevron-down"></i></button>
+				<!-- <button class="filter-button" onclick="toggleDropdown('filterDropdown')">Filter <i class="fas fa-chevron-down"></i></button>
 				<button class="filter-button" onclick="toggleDropdown('domainDropdown')">Domain <i class="fas fa-chevron-down"></i></button>
-				<button class="filter-button" onclick="toggleDropdown('yearDropdown')">Year <i class="fas fa-chevron-down"></i></button>
-			  </div>
+				<button class="filter-button" onclick="toggleDropdown('yearDropdown')">Year <i class="fas fa-chevron-down"></i></button> -->
+				<button 
+  disabled 
+  style="font-family: Arial, sans-serif; border: none; border-radius: 8px; padding: 10px 20px; margin: 10px; font-size: 16px; cursor: not-allowed; transition: all 0.3s ease; background-color: #d3d3d3; color: #6c757d; height: 50px; width: auto; display: flex; align-items: center; justify-content: center;"
+>
+  <i class="fas fa-user-circle numberReg" style="margin-right: 8px;"></i>
+</button>
+
+<button 
+  id="downloadBtn" 
+  style="font-family: Arial, sans-serif; border: none; border-radius: 8px; padding: 10px 20px; margin: 10px; font-size: 16px; cursor: pointer; transition: all 0.3s ease; background-color: #007bff; color: #fff; height: 50px; width: auto; display: flex; align-items: center; justify-content: center;"
+  onmouseover="this.style.backgroundColor='#0056b3'" 
+  onmouseout="this.style.backgroundColor='#007bff'"
+>
+<span id="btnText">Download Excel</span>
+<span id="spinner" style="display: none; margin-left: 10px;">
+  <i class="fas fa-spinner fa-spin"></i>
+</span>
+</button>
+
+			</div>
 			  
-			  <div id="filterDropdown" class="dropdown-container">
+			  <!-- <div id="filterDropdown" class="dropdown-container">
 				<div class="filter-section">
 				  <h5>Domain</h5>
-				  <label><input type="radio" name="domain" value="Coding"> Coding</label>
-				  <label><input type="radio" name="domain" value="Robotics"> Robotics</label>
-				  <label><input type="radio" name="domain" value="Aeromodelling"> Aeromodelling</label>
+				  <label><input type="radio" class="domain" name="domain" value="coding"> Coding</label>
+				  <label><input type="radio" class="domain" name="domain" value="robotics"> Robotics</label>
+				  <label><input type="radio" class="domain" name="domain" value="aero"> Aeromodelling</label>
+				  <label><input type="radio" class="domain" name="domain" value="media"> Media</label>
+				  <label><input type="radio" class="domain" name="all" value="All">All</label>
 				  <span class="clear" onclick="clearSelection('domain')">Clear</span>
 				</div>
 				<div class="filter-section">
 				  <h5>Year</h5>
-				  <label><input type="radio" name="year" value="1st Year"> 1st Year</label>
-				  <label><input type="radio" name="year" value="2nd Year"> 2nd Year</label>
-				  <label><input type="radio" name="year" value="3rd Year"> 3rd Year</label>
-				  <label><input type="radio" name="year" value="4th Year"> 4th Year</label>
+				  <label><input type="radio" class="year" name="year" value="1st Year"> 1st Year</label>
+				  <label><input type="radio"  class="year" name="year" value="2nd Year"> 2nd Year</label>
+				  <label><input type="radio"  class="year" name="all" value="All">All</label>
 				  <span class="clear" onclick="clearSelection('year')">Clear</span>
 				</div>
 				<label><input type="radio" name="all" value="All">All</label>
 				<div class="filter-buttons">
 			  
 				  <button class="clear-filter" style="background-color: rgb(162, 8, 8);" onclick="clearAllFilters()">Clear Filter</button>
-				  <button class="apply-button" onclick="applyFilters()">Apply Filter</button>
+				  <button class="apply-button-all">Apply Filter</button>
 				</div>
 			  </div>
 			  
@@ -217,7 +237,7 @@
 				  <button class="apply-button" onclick="applyYearFilter()">Apply Filter</button>
 				</div>
 			  </div>
-			  <br>
+			  <br> -->
         <!-- <div class="recruit-container"> -->
         
     
@@ -317,10 +337,22 @@
   <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
     </div>
 	<script>
-        function toggleDropdown() {
-            const dropdown = document.getElementById("dropdown-content");
-            dropdown.classList.toggle("show");
-        }
+		
+
+       function toggleDropdown(dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  const allDropdowns = document.querySelectorAll(
+    ".dropdown, .dropdown-container"
+  );
+  allDropdowns.forEach((dd) => {
+    if (dd !== dropdown) dd.style.display = "none";
+  });
+
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+}
+
+	  
     </script>
  <script src="../js/jquery.js"></script>
 <!-- <script src="../js/popper.min.js"></script> -->
@@ -343,6 +375,8 @@
 <script src="../js/map-script.js"></script>
 <!--End Google Map APi-->
     <script type="module" src="../js/admin/registers.js"></script>
-	<script src="../js/admin/filter.js"></script>
+	<!-- <script type="module" src="../js/admin/filter.js"></script> -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   </body>
 </html>
