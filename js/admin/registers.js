@@ -14,6 +14,26 @@ const dataLoader = document.querySelector("#dataLoader");
 
 dataLoader.style.display = "block";
 
+const numProfile = document.querySelector(".numberReg");
+
+numProfile.parentElement.style.display = "none";
+
+const downloadBtn = document.getElementById("downloadBtn");
+
+downloadBtn.style.display = "none";
+
+const btnText = document.getElementById("btnText");
+const spinner = document.getElementById("spinner");
+
+downloadBtn.addEventListener("click", () => {
+  btnText.style.display = "none";
+  spinner.style.display = "inline";
+  downloadBtn.disabled = true;
+  exportToExcel();
+});
+
+let data = [];
+
 function toggleDropdown(element) {
   const details = element.childNodes[1];
   const arrow = details.childNodes[0];
@@ -117,7 +137,30 @@ const isLoggedIn = async () => {
 
 const getFreshersDetails = async () => {
   const q = query(collection(db, "recruits"));
+  // const q = query(collection(db, "recruits"),where("interestedFiels"));
+  // const q = query(collection(db, "recruits"));
+  // const q = query(collection(db, "recruits"));
+  // const q = query(collection(db, "recruits"));
   const querySnapShot = await getDocs(q);
+  numProfile.innerHTML = `&nbsp;${querySnapShot.size}`;
+  numProfile.parentElement.style.display = "inline";
+  downloadBtn.style.display = "inline";
+
+  data = querySnapShot.docs.map((doc) => {
+    const docData = doc.data();
+
+    // Specify the key to remove (e.g., 'mobile')
+    const keyToRemove = "selected";
+
+    // Remove the specified key
+    if (keyToRemove in docData) {
+      delete docData[keyToRemove];
+    }
+
+    // Return the updated object
+    return docData;
+  });
+
   if (querySnapShot.size > 0) {
     querySnapShot.forEach((doc) => {
       const data = doc.data();
@@ -145,5 +188,37 @@ const logOut = document.querySelector("#logout");
 logOut.addEventListener("click", () => {
   logout();
 });
+
+function exportToExcel() {
+  // Create a new workbook and a sheet
+  const workbook = XLSX.utils.book_new();
+  const worksheet = XLSX.utils.json_to_sheet(data);
+
+  // Calculate column widths
+  const columnWidths = Object.keys(data[0]).map((key) => {
+    // Find the maximum length of content for each column
+    return {
+      wch: Math.max(
+        key.length, // Header length
+        ...data.map((row) => (row[key] ? row[key].toString().length : 0)) // Data length
+      ),
+    };
+  });
+
+  // Apply the calculated column widths to the worksheet
+  worksheet["!cols"] = columnWidths;
+
+  // Add the worksheet to the workbook
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+
+  // Write the file and trigger download
+  XLSX.writeFile(workbook, "registered_data.xlsx");
+
+  btnText.style.display = "inline-block";
+  spinner.style.display = "none";
+  downloadBtn.disabled = false;
+}
+
+// Add event listener to the button
 
 window.onload = isLoggedIn();
