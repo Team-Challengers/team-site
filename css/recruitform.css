@@ -55,4 +55,26 @@
         background-color: #cccccc;
         border: none;
       }
+
+
+      .cardf {
+        width: 500px;
+        padding: 40px; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #fff;
+        margin: 50px auto;
+      }
+      .cardf h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      .cardf p {
+        font-size: 22px; 
+        margin-bottom: 20px;
+      }
+      .cardf button:hover {
+        background-color: #0056b3;
+      }     
     
