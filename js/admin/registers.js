@@ -137,7 +137,7 @@ const isLoggedIn = async () => {
 };
 
 const getFreshersDetails = async () => {
-  // const q = query(collection(db, "recruits"));
+  const q = query(collection(db, "recruits"));
 
   // const q = query(
   //   collection(db, "recruits"),
@@ -193,11 +193,11 @@ const getFreshersDetails = async () => {
   //   where("interestField", "==", "media"),
   //   where("year", "==", "2nd Year")
   // );
-  const q = query(
-    collection(db, "recruits"),
-    where("interestField", "==", "media"),
-    where("year", "==", "2nd Year")
-  );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "media"),
+  //   where("year", "==", "2nd Year")
+  // );
 
   const querySnapShot = await getDocs(q);
   numProfile.innerHTML = `&nbsp;${querySnapShot.size}`;
