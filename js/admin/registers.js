@@ -4,6 +4,7 @@ import {
   getDocs,
   collection,
   query,
+  where,
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const loader = document.querySelector(".pageLoader");
@@ -137,10 +138,67 @@ const isLoggedIn = async () => {
 
 const getFreshersDetails = async () => {
   const q = query(collection(db, "recruits"));
-  // const q = query(collection(db, "recruits"),where("interestedFiels"));
-  // const q = query(collection(db, "recruits"));
-  // const q = query(collection(db, "recruits"));
-  // const q = query(collection(db, "recruits"));
+
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "coding")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "coding"),
+  //   where("year", "==", "2nd Year")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "coding"),
+  //   where("year", "==", "2nd Year")
+  // );
+
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "robotics")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "robotics"),
+  //   where("year", "==", "2nd Year")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "robotics"),
+  //   where("year", "==", "2nd Year")
+  // );
+
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "aero")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "aero"),
+  //   where("year", "==", "2nd Year")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "aero"),
+  //   where("year", "==", "2nd Year")
+  // );
+
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "media")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "media"),
+  //   where("year", "==", "2nd Year")
+  // );
+  // const q = query(
+  //   collection(db, "recruits"),
+  //   where("interestField", "==", "media"),
+  //   where("year", "==", "2nd Year")
+  // );
+
   const querySnapShot = await getDocs(q);
   numProfile.innerHTML = `&nbsp;${querySnapShot.size}`;
   numProfile.parentElement.style.display = "inline";
