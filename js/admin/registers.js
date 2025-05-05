@@ -219,6 +219,8 @@ const getFreshersDetails = async () => {
     return docData;
   });
 
+  console.log(data);
+
   if (querySnapShot.size > 0) {
     querySnapShot.forEach((doc) => {
       const data = doc.data();
